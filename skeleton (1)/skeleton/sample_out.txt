@@ -1,0 +1,88 @@
+Hello! Welcome to the ENGI1006 class modeler.
+With this program we will simulate the ENGI1006 course at Columbia University
+First, what would you like to name the Professor: Tim
+Course created!
+Course Overview:
+	Professor: Tim
+	Number of Students: 0
+	Number of Assignments: 0
+
+Would you like to register students? (y/n)y
+Generating a new student...
+What would you like to name the new student: Joe
+Registered new student: Joe
+Course Overview:
+	Professor: Tim
+	Number of Students: 1
+		Joe
+	Number of Assignments: 0
+
+Would you like to register students? (y/n)y
+Generating a new student...
+What would you like to name the new student: Jill
+Registered new student: Jill
+Course Overview:
+	Professor: Tim
+	Number of Students: 2
+		Joe,Jill
+	Number of Assignments: 0
+
+Would you like to register students? (y/n)y
+Generating a new student...
+What would you like to name the new student: Jane
+Registered new student: Jane
+Course Overview:
+	Professor: Tim
+	Number of Students: 3
+		Joe,Jill,Jane
+	Number of Assignments: 0
+
+Would you like to register students? (y/n)n
+Would you like to create assignments? (y/n)y
+Generating a new assignment...
+How difficult would you like the new assignment to be? (0-100):50
+Assigned new assignment: 	Assignment Difficulty: 50
+	Student Count:3
+Course Overview:
+	Professor: Tim
+	Number of Students: 3
+		Joe,Jill,Jane
+	Number of Assignments: 1
+		50
+Average grade: 73.47422070419016
+Would you like to create assignments? (y/n)y
+Generating a new assignment...
+How difficult would you like the new assignment to be? (0-100):75
+Assigned new assignment: 	Assignment Difficulty: 75
+	Student Count:3
+Course Overview:
+	Professor: Tim
+	Number of Students: 3
+		Joe,Jill,Jane
+	Number of Assignments: 2
+		50,75
+Average grade: 73.6829930418653
+Would you like to create assignments? (y/n)y
+Generating a new assignment...
+How difficult would you like the new assignment to be? (0-100):100
+Assigned new assignment: 	Assignment Difficulty: 100
+	Student Count:3
+Course Overview:
+	Professor: Tim
+	Number of Students: 3
+		Joe,Jill,Jane
+	Number of Assignments: 3
+		50,75,100
+Average grade: 73.56458079489987
+Would you like to create assignments? (y/n)n
+Finishing the course...
+Class Average: 73.56458079489987
+Teacher pay: 675
+Course Overview:
+	Professor: Tim
+	Number of Students: 3
+		Joe,Jill,Jane
+	Number of Assignments: 3
+		50,75,100
+Average grade: 73.56458079489987
+Plot? (y/n)y
