@@ -22,15 +22,11 @@ def SKLearnKnnClassifier(training, testing, training_labels, testing_labels, k):
     # instantiate model
     knn = KNeighborsClassifier(n_neighbors=k,metric='euclidean')
     # fit model to training data
-    print(training.shape)
-    print(testing.shape)
-    print(training_labels.shape)
-    print(testing_labels.shape)
-    knn.fit(training,training_labels)
+    bst = knn.fit(training,training_labels)
     # predict test labels
-    y_pred = knn.predict([testing_labels])
+    score = knn.score(testing,testing_labels)
     # return % where prediction matched actual
-    return round((y_pred/testing_labels) * 100,2)
+    return score
 
 def SKLearnSVMClassifier(training, testing, training_labels, testing_labels):
     '''leverage Scikit-learn to implement the support vector machine classifier
@@ -51,6 +47,6 @@ def SKLearnSVMClassifier(training, testing, training_labels, testing_labels):
     # fit model to training data
     clf.fit(training,training_labels)
     # predict test labels
-    y_pred = clf.predict(testing_labels)
+    score = clf.score(testing,testing_labels)
     # return % where prediction matched actual
-    return round((y_pred/testing_labels) * 100,2)
+    return score

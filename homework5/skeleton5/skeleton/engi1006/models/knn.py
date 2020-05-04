@@ -20,7 +20,7 @@ def NNClassifier(training, testing, training_labels, testing_labels, k):
     - at the end, return what percentagle of labels matched, i.e. how many labels in `labels` matched the label in `testing_labels`
     '''
     # preallocate labels
-
+    
     # for each point
         # run knn on each point and assign its label into labels
 

@@ -17,9 +17,9 @@ def scatterMatrix(data, labels, count=5):
     # use labels as class
     print(df.columns)
     # pairplot
-    chart1,ax1 = plt.subplots()
+   
     print(df)
-    pair = sns.pairplot(df)
+    pair = sns.pairplot(data=df)
     # show plot
     plt.show()
 
@@ -33,6 +33,10 @@ def correlationHeatmap(data):
     
     chart2,ax2 = plt.subplots()
     # heatmap of correlations
-    heat = sns.heatmap(df)
+    """
+    rescale, know data
+    """
+    print(df)
+    heat = sns.heatmap(data=df,annot=True,linewidths=.5,ax=ax2)
     # show plot
     plt.show()
