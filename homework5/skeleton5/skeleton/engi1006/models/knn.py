@@ -1,7 +1,8 @@
 import numpy as np
+import pandas as pd
 from math import sqrt
-from statistics import mode
 
+from statistics import mode
 
 def NNClassifier(training, testing, training_labels, testing_labels, k):
     '''Runs the Nearest Neighbor classifier:
@@ -19,13 +20,15 @@ def NNClassifier(training, testing, training_labels, testing_labels, k):
     - for each row in the testing data, use knn to predict the label
     - at the end, return what percentagle of labels matched, i.e. how many labels in `labels` matched the label in `testing_labels`
     '''
-    # preallocate labels
     
+    # preallocate labels
+    labels = []
     # for each point
+    for point in range(k):
         # run knn on each point and assign its label into labels
-
+        labels = knn(training,training_labels,testing[point],k)
     # return % where prediction matched actual
-    return 0.0
+    return (np.array(labels) == testing_labels).sum()/testing_labels.size
 
 
 def knn(data, data_labels, vector, k):
@@ -41,11 +44,13 @@ def knn(data, data_labels, vector, k):
     `vector`, and take a vote amongst their labels. Whichever has more (b or m), return
     that value'''
     # preallocate distance array
-
+    distance = []
     # for each point in data
+    for point in data:
         # calculate the distance to vector, store in distance array
-
+        distance.append(np.linalg.norm(point - vector))
     # sort distances, and get indexes to use in data_labels (look at np.argsort)
-
+    distance = np.argsort(distance)
     # take vote amongs top labels
+    print(distance)
     return 'M'
