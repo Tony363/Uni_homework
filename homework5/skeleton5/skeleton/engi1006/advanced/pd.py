@@ -29,10 +29,8 @@ def advancedStats(data, labels):
     # groupby labels into "benign" and "malignant"
     BM_mean = df.groupby('labels').mean()
     BM_std = df.groupby('labels').std()
-    print(BM_mean)
-    print(BM_std)
-    # benign = df.loc[df.labels == 'B',:]
-    # malignant = df.loc[df.labels == 'M',:]
+    
+  
  
     
     # collect means and standard deviations for columns,

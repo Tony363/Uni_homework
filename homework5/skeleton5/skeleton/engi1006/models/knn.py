@@ -26,9 +26,12 @@ def NNClassifier(training, testing, training_labels, testing_labels, k):
     # for each point
     for point in range(k):
         # run knn on each point and assign its label into labels
-        labels = knn(training,training_labels,testing[point],k)
+        labels.append(knn(training,training_labels,testing[point],k))
     # return % where prediction matched actual
-    return (np.array(labels) == testing_labels).sum()/testing_labels.size
+    labels = np.ravel(labels)
+    print(labels.size)
+    print(testing_labels.size)
+    return (labels == testing_labels).sum()/testing_labels.size
 
 
 def knn(data, data_labels, vector, k):
@@ -45,6 +48,7 @@ def knn(data, data_labels, vector, k):
     that value'''
     # preallocate distance array
     distance = []
+    vote = []
     # for each point in data
     for point in data:
         # calculate the distance to vector, store in distance array
@@ -52,5 +56,13 @@ def knn(data, data_labels, vector, k):
     # sort distances, and get indexes to use in data_labels (look at np.argsort)
     distance = np.argsort(distance)
     # take vote amongs top labels
-    print(distance)
-    return 'M'
+    for neighbor in range(k):
+        
+        index = distance[neighbor]
+        vote.append(data_labels[index])
+        # print(type(data_labels[index]))
+        
+    
+    # print(vote)
+    
+    return vote
