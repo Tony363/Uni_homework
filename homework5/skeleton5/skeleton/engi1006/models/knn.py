@@ -3,6 +3,7 @@ import pandas as pd
 from math import sqrt
 
 from statistics import mode
+from collections import Counter
 
 def NNClassifier(training, testing, training_labels, testing_labels, k):
     '''Runs the Nearest Neighbor classifier:
@@ -29,9 +30,12 @@ def NNClassifier(training, testing, training_labels, testing_labels, k):
         labels.append(knn(training,training_labels,testing[point],k))
     # return % where prediction matched actual
     labels = np.ravel(labels)
-    print(labels.size)
-    print(testing_labels.size)
-    return (labels == testing_labels).sum()/testing_labels.size
+    # print(labels)
+    # print(testing_labels)
+    common_target = Counter(labels).most_common(1)[0][0]
+    common_target = mode(labels)
+    # print(common_target)
+    return (common_target == testing_labels).sum()/testing_labels.size
 
 
 def knn(data, data_labels, vector, k):

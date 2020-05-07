@@ -37,6 +37,6 @@ def correlationHeatmap(data):
     rescale, know data
     """
   
-    heat = sns.heatmap(data=df,annot=True,linewidths=.5,ax=ax2)
+    heat = sns.heatmap(data=df,ax=ax2)
     # show plot
     plt.show()
