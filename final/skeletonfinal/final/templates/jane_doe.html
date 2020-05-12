@@ -22,6 +22,13 @@
 <title>Kamryn Home Page {% block title %}{% endblock %}</title>
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+a {
+  color: grey;
+}
+ footer a {
+    color: #fff;
+  }
+
 </style>
 <body class="w3-light-grey">
 
@@ -34,10 +41,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </button>
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav mr-auto mt-2">
-                <li class="nav-item"><a class="nav-link" href="/Class">Class</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Assignment">Assignment</a></li>
-                <li class="nav-item"><a class="nav-link" href="/resume">resume</a></li>
-                <li class="nav-item"><a class="nav-link" href="/test1">test1</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Class">Home Section 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Assignment">Home Section 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Description">Favourite Assignment</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Portfolio">List of Classes</a></li>
             </ul>
            
         </div>
@@ -106,7 +113,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <!-- Right Column -->
     <div class="w3-twothird">
         {% if version == "index" %}
-        {{request.path}}
+       
         <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
             <!-- TODO -->
@@ -116,7 +123,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             <!-- TODO -->
         </div>
         {% else %}
-        {None}
+       
         {% endif %}
         {% block main %}
         {% endblock %}

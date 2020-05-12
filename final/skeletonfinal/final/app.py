@@ -21,20 +21,19 @@ def hello():
 @app.route("/Class",endpoint='v2')
 def Class():
     version = request.endpoint
-    print(type(version))
-    return render_template("class.html",version=version)
+    return render_template("intro.html",version=version)
 
 # @app.route("/Assignment")
 # def Assignment():
 #     return render_template("assignment.html")
 
-@app.route("/resume")
-def test():
-    return render_template('index.html')
+@app.route("/Description")
+def Description():
+    return render_template('description.html')
 
-@app.route("/test1")
-def test1():
-    return render_template()
+@app.route("/Portfolio")
+def Portfolio():
+    return render_template("portfolio.html")
 #start the server
 if __name__ == "__main__":
     app.run()
