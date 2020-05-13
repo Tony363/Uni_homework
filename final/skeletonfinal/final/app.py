@@ -23,10 +23,6 @@ def Class():
     version = request.endpoint
     return render_template("intro.html",version=version)
 
-# @app.route("/Assignment")
-# def Assignment():
-#     return render_template("assignment.html")
-
 @app.route("/Description")
 def Description():
     return render_template('description.html')
